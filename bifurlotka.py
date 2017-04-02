@@ -39,12 +39,12 @@ def simulation(_alfa, _beta, _gamma, _delta, _epsilon, _dzeta, _eta):
             break
     
     Ret = [G, Z]
- #   print Ret    
+  
     
     return Ret
 step = np.arange(0., 5., .01)
 step = np.round(step, 2)
-#print step
+
 alfa = .0
 T = []
 for i in range (500):
@@ -52,25 +52,21 @@ for i in range (500):
    
 S = []   
 Bif = []
-#print len(T[200][0])
-#print T[200][0][0]
-#print len(T)
+
 for x in range(len(T)):
        
     for g in range (len(T[x][0])):
         if (not(g == 0 or g == len(T[x][0]) or g == len(T[x][0]) - 1)):
             if (T[x][0][g] >= 0 and T[x][0][g] <= T[x][0][g-1] and T[x][0][g] <= T[x][0][g+1]):
                 
-               # P.append(T[x][0][g])
+              
                 Bif.append(T[x][0][g])
                 S.append(step[x])
-        #break
+       
 
 
 
-#print Bif[100][1]
-#aaa = Bif[0:-1][0]
-#print aaa
+
 plt.plot(S, Bif)
 
 
