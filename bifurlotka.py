@@ -66,7 +66,7 @@ for x in range(len(T)):
  
 plt.scatter(S, Bif, s = 0.5)
 
-
+##
 
 '''
 ranMax = 1000
