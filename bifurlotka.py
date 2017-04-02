@@ -42,13 +42,13 @@ def simulation(_alfa, _beta, _gamma, _delta, _epsilon, _dzeta, _eta):
   
     
     return Ret
-step = np.arange(0., 5., .01)
+step = np.arange(0., .01, .001)
 step = np.round(step, 2)
 
 alfa = .0
 T = []
-for i in range (500):
-    T.append(simulation(step[i], beta, gamma, delta, epsilon, dzeta, eta))
+for i in range (len(step)):
+    T.append(simulation(alfa, beta, step[i], delta, epsilon, dzeta, eta))
    
 S = []   
 Bif = []
