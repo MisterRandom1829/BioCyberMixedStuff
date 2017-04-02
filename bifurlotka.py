@@ -63,7 +63,8 @@ for x in range(len(T)):
                 Bif.append(T[x][0][g])
                 S.append(step[x])
 
-plt.plot(S, Bif)
+ 
+plt.scatter(S, Bif, s = 0.5)
 
 
 
